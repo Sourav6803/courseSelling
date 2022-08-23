@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
-objectId = mongoose.schema.types.objectId
+objectId = mongoose.Schema.Types.ObjectId
 
-const newSchema = new mongoose.schema({
+const newSchema = new mongoose.Schema({
     title: {type: String, trim: true, required: true},
     description: {type: String, require: true, trim: true},
     isDeleted: {type: Boolean, default: false},
@@ -9,8 +9,7 @@ const newSchema = new mongoose.schema({
     sellerId: { type: objectId, 
                 ref: "sellers"
               },
-    crOverviewId: {type: objectId, ref: "courseOverview"},
-    reviewsId: {type: objectId, ref: "reviews"},
+    //reviewsId: {type: objectId, ref: "reviews"},
     totalReviews: {type: Number, default: 0},
     duration: String,
     totalPurchased: {type: Number, },

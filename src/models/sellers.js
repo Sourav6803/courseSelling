@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
-objectId = mongoose.schema.types.objectId
+objectId = mongoose.Schema.Types.ObjectId
 
-const newSchema = new mongoose.schema({
+const newSchema = new mongoose.Schema({
       name: { 
         type: String,
         required: true,

@@ -33,6 +33,8 @@ const logUser = function async(req, res){
         return res.status(400).send({status: false, error: "User is Invalid"})
     }
     let token = createToken(user._id)
+    res.header("Authorization :", token)
+    res.send(token)
 }
 
 
